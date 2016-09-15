@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         forecastList.adapter = ForecastListAdapter(items)
 
         async() {
-            Request("http://jsonplaceholder.typicode.com").run()
+            Request("http://jsonplaceholder.typicode.com/posts/1").run()
             uiThread {
                 longToast("Request performed")
             }
