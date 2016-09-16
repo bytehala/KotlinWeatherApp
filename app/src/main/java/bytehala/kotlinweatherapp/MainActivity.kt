@@ -31,7 +31,8 @@ class MainActivity : AppCompatActivity() {
         forecastList.adapter = ForecastListAdapter(items)
 
         async() {
-            Request("http://jsonplaceholder.typicode.com/posts/1").run()
+            Request("http://api.openweathermap.org/data/2.5/forecast/daily?" +
+            "APPID=15646a06818f61f7b8d7823ca833e1ce&q=94043&mode=json&units=metric&cnt=7").run()
             uiThread {
                 longToast("Request performed")
             }
